@@ -1,0 +1,123 @@
+Node Quiz                                                                                                                Name:_____________
+
+1) What is node.js and why should we use it?
+
+-------Node is a server-side Javascript interpreter that changes the notion of how a server should work.
+-------Because it allows a programmer to build highly scalable applications and write code that manages dozens of miles of simultaneous connections on a single physical machine.
+
+2) Does NPM come bundled with node.js when you install it?
+  --yes
+
+
+3) What is the function used to send a file to a browser from an express app?
+    ----res.sendFile();
+
+
+4) What does the following code do?
+    app.use(bodyParser.json());
+        ---Extracts the entire body portion of an incoming request stream and exposes it on req.body as something easier to interface with.
+
+
+5) What does the following code do?
+    app.use(express.static('public'));
+      ---conect to the another carpet of you work on the project.
+
+6) Please create a basic outline for a CRUD application for the following:
+                                  answer:
+var stocks={
+"id":1,
+"stock name": "macys",
+"stock symbol":"macys",
+"stock price": 18.99,
+"time":7:00 AM
+
+}
+{
+" POST/stocks":{
+  "desc":"make a new stock using the object stocks ",
+  "response": "201 aplication/json  example res.json(stocks)",
+  "data":{}// return a object
+},
+"GET/stocks":{
+GET/stocks/:id":{
+"desc":"return one stock that is find by the id provided",
+"response":"200 aplication/json" example res.json,
+"data":{}
+},
+"PUT/stock/:id":{
+"desc":"update and return the matchin stocks with the update information ",
+"resp":"200 aplication/json",
+"data":{}
+},
+"DELETE/stocks/:id":{
+"desc":"delete and return the matching stock with the id provided",
+"resp":"200 aplication/json",
+"data":{}
+}
+
+}
+
+7) What is the “event Loop”?
+    ---Is where you create an event created by a programmer to do put and remove and make changes as a server and you work it quickly.
+
+8) What is a callback?
+  ---is a function that is passed to another function as a parameter, and the callback function is called (or executed) inside the otherFunction.
+
+9) Please explain synchronous vs asynchronous behavior.
+---Synchronous: It waits for each operation to complete, after that only it executes the next operation. For your query: The console.log() command will not be executed until & unless the query has finished executing to get all the result from Database.
+---Asynchronous: It never waits for each operation to complete, rather it executes all operations in the first GO only. The result of each operation will be handled once the result is available. For your query: The console.log() command will be executed soon after the Database.Query() method. While the Database query runs in the background and loads the result once it is finished retrieving the data.
+
+10) What is package.json?
+      ---This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies and know tha version the program.
+
+
+11) Which module is used for file based operations?
+   --module.exports
+
+
+12) How will you open a file using node?
+
+fs.open(path, "w+", function(error, fd) {
+if (error) {
+console.error("open error:  " + error.message);
+} else {
+console.log("Successfully opened " + path);
+}
+});
+
+
+13) What is the purpose of __dirname variable?
+  --- is not actually a global but rather local to each module.
+
+
+14) Can you access the DOM in node?
+    ----Not
+
+15) Explain briefly how node.js solves the problem of blocking i/o.
+
+--Non-Blocking I/O + Epoll (Event Driven) + V8 Engine  = Node.js
+--So Javascript was created with user interface in mind,  one of the language features is function first class citizen that allows you to pass functions as parameters, so basically you can monitor for events (user interaction) and pass a function to handle this events.
+
+
+16) What is the most common used framework used in node.js?
+Hint:  It’s used to write web servers.
+    ---express.js
+
+17) Please write a basic route using the get verb that returns all the items from an array in JSON format.
+Hint: We did this in class…
+      app.get('/items', function(req, res){
+      res.json(items);
+      });
+
+18) What does CRUD stand for?
+  -- Create, Read, Update and Delete. It is a set of operations we get servers to execute (POST, GET, PUT and DELETE respectively).
+
+19) Who developed node.js?
+  --Ryan Dahl
+
+20) How do we make code in a file (module) in our project accessible to other modules in our project?
+ Please describe what you need to do in the module with the code, and in the module that wishes to use that code.
+- module.exports();
+
+-in the server:
+var data = require('./data');
